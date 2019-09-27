@@ -1,0 +1,4 @@
+My name is Ariel Guerrero
+I am running this script from /home/aes604/courses/cs3423/assignments 
+My username is aes604 
+I am logged in to fox01
