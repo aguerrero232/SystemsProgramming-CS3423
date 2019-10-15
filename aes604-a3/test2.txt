@@ -1,0 +1,10 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+adz110    5344  5334  0 00:01 pts/2    00:00:00 bash
+dmq292    6908  6854  0 23:59 pts/1    00:00:00 bash
+adz110    7227  7150  0 22:12 pts/9    00:00:00 who
+erg474    7466  7461  0 08:54 pts/10   00:00:00 ls
+dmq292    7966  7960  0 11:04 pts/13   00:00:00 assign1.sh if of
+xle135    8983  8636  0 08:59 pts/15   00:00:00 ssh ctf.cs.utsarr.net
+zeh458    9057  1980  0 08:59 pts/7    00:00:00 vim prog.c
+rslavin   9150  9139  0 10:55 pts/16   00:00:00 ps -af
+xle135    8636  8628  0 01:11 pts/15   00:00:00 bash
