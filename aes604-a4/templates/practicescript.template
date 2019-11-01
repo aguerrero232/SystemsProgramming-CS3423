@@ -1,0 +1,24 @@
+[[dept_name]]
+< html >
+< body >
+<h1 > NOTICE OF OVERENROLLMENT - COURSE [[dept_code]] [[course_num]] [[dept_code]]←-
+- [[date]] </ h1 >
+<p >
+[[course_start]]
+[[course_end]]
+Dear Instructor ,
+</p >[[date]]
+<p >
+Your course , [[course_name]] , scheduled from [[course_start]] to←-
+[[course_end]] , has exceeded normal capacity with an ←-
+enrollment of [[num_students]] students . This must be ←-
+corrected within thirty days or this issue will be referred ←-
+to the [[dept_name]] department for further review .  [[num_students]]
+</p >
+<p >[[date]]
+[[date]]
+-  [[course_name]] [[dept_name]] Administration
+</p >
+</ body >
+</ html >
+[[date]]
