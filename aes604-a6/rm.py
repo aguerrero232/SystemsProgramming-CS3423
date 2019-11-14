@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import re
 import shutil
 import sys
 import os
@@ -14,6 +15,7 @@ def check(item):
     return new_path_name
 
 def deletestuff(path):
+    path = re.sub("/+$", "", path)
     new_name = check(path)
     os.rename(path, new_name)
     shutil.move(new_name, home + "/rm_trash/")

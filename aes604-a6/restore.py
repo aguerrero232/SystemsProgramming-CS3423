@@ -10,24 +10,20 @@ if os.path.isfile(home + "/rm_trash/.rm_trashDB"):
         for line in infile:
             datalist = line.split()
             datalist = datalist[0].split(",")
-            database.append(dict({"BaseName": datalist[0], "Original": datalist[1], "RMTRASH": datalist[2], "SortThis": os.path.splitext(datalist[2])[0]}))
-database.sort(key=lambda i: i["SortThis"], reverse=True)
-with open(home + "/rm_trash/.rm_trashDB", "w+") as outfile:
-    for contents in database:
-        outfile.write(contents.get("BaseName")+","+contents.get("Original")+","+contents.get("RMTRASH"))
-        outfile.write("\n")
+            database.append(dict({"BaseName": datalist[0], "Original": datalist[1], "RMTRASH": datalist[2]}))
 for args in sys.argv[1:]:
-    count = 0
+    remove = None
     for items in database:
         if items.get("Original") == args:
-            shutil.move(items.get("RMTRASH"), args), database.remove(items)
-            infile = open(home + "/rm_trash/.rm_trashDB", 'r').readlines()
-            with open(home + "/rm_trash/.rm_trashDB", 'w') as outfile:
-                for index, line in enumerate(infile):
-                    if index != count:
-                        outfile.write(line)
-            break
-        count += 1
+            remove = items
+    if remove:
+        shutil.move(remove.get("RMTRASH"), args)
+        database.remove(remove)
+        infile = open(home + "/rm_trash/.rm_trashDB", 'r').readlines()
+        with open(home + "/rm_trash/.rm_trashDB", 'w') as outfile:
+            for contents in database:
+                outfile.write(contents.get("BaseName") + "," + contents.get("Original") + "," + contents.get("RMTRASH"))
+                outfile.write("\n")
 # Author: Ariel Guerrero
 # Assignment 6: Python Scripting 2
 # Description:  Takes in any amount of files and directories and deletes them
