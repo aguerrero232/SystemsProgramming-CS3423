@@ -1,7 +1,0 @@
-DESCRIPTION:
-
-
-rm.py: takes an absolute or relative path of files or directories and moves them to ~/rm_trash
-restore.py: takes an absolute path and restores any files or directories from ~/rm_trash
-
--r must be passed as an argument when removing directories 
